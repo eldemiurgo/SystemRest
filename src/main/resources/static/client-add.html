@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Agregar supplier</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>Agregar Clients</h3>
+    <div>
+
+        <form action="#" method="post"
+            th:object="${client}"
+            th:action="@{/clients/save}"
+            >
+
+            <div class="form-group">
+                <label for="idClient">IdClient</label>
+                <input type="text" id="idClient"
+                       class="form-controller"
+                       placeholder="ingrese IdClient"
+                       th:field="*{idClient}">
+            </div>
+
+            <div class="form-group">
+                <label for="razonSocial">RazonSocial</label>
+                <input type="text" id="razonSocial"
+                       class="form-controller"
+                       placeholder="ingrese nombre"
+                       th:field="*{razonSocial}">
+            </div>
+
+            <div class="form-group">
+                <label for="tipoDoc">TipoDoc</label>
+                <input type="text" id="tipoDoc"
+                       class="form-controller"
+                       placeholder="ingrese Tipo Doc"
+                       th:field="*{tipoDoc}">
+            </div>
+            <div class="form-group">
+                <label for="numDoc">NumDoc</label>
+                <input type="text" id="numDoc"
+                       class="form-controller"
+                       placeholder="ingrese numero Documento"
+                       th:field="*{numDoc}">
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="text" id="Email"
+                       class="form-controller"
+                       placeholder="ingrese Email"
+                       th:field="*{Email}">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Agregar Cliente
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>

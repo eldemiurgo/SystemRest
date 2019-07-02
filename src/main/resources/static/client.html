@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Listado de Clientes</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>Listado de clientes</h3>
+    <div class="col-md-12" >
+        <a th:href="@{/clients/add}" class="btn btn-primary">Agregar Clientes</a>
+    </div>
+
+    <div th:switch="clients">
+        <div th:case="*">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">IdClient</th>
+                    <th scope="col">Razon Social</th>
+                    <th scope="col">Tipo Doc</th>
+                    <th scope="col">Num Doc</th>
+                    <th scope="col">Email</th>
+
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="client : ${clients}">
+                    <th scope="row" th:text="${client.idClient}"></th>
+                    <td th:text="${client.razonSocial}"></td>
+                    <td th:text="${client.tipoDoc}"></td>
+                    <td th:text="${client.numDoc}"></td>
+                    <td th:text="${client.Email}"></td>
+
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <a th:href="@{/clients/edit/{idClient} (idClient=${client.idClient}) }"
+                                    class="btn btn-primary btn-sm">Editar</a>
+                            <a th:href="@{/clients/delete/{idClient} (idClient=${client.idClient}) }"
+                                    class="btn btn-danger btn-sm">Eliminar</a>
+                        </div>
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

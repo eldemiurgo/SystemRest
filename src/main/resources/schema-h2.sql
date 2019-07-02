@@ -16,3 +16,12 @@ create table product (
 
 
 );
+
+create table client(
+    idClient   identity primary key ,
+    razonSocial varchar (100),
+    tipoDoc     varchar (50),
+    numDoc      varchar (10),
+    Email       varchar (50)
+
+);

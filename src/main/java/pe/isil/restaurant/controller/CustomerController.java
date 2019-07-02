@@ -1,4 +1,4 @@
-package pe.isil.restaurant.service;
+package pe.isil.restaurant.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
