@@ -34,17 +34,17 @@
                 </thead>
                 <tbody>
                 <tr th:each="client : ${clients}">
-                    <th scope="row" th:text="${client.idClient}"></th>
+                    <th scope="row" th:text="${client.idCliente}"></th>
                     <td th:text="${client.razonSocial}"></td>
                     <td th:text="${client.tipoDoc}"></td>
                     <td th:text="${client.numDoc}"></td>
-                    <td th:text="${client.Email}"></td>
+                    <td th:text="${client.email}"></td>
 
                     <td class="text-right">
                         <div class="btn-group">
-                            <a th:href="@{/clients/edit/{idClient} (idClient=${client.idClient}) }"
+                            <a th:href="@{/clients/edit/{idClient} (idClient=${client.idCliente}) }"
                                     class="btn btn-primary btn-sm">Editar</a>
-                            <a th:href="@{/clients/delete/{idClient} (idClient=${client.idClient}) }"
+                            <a th:href="@{/clients/delete/{idClient} (idClient=${client.idCliente}) }"
                                     class="btn btn-danger btn-sm">Eliminar</a>
                         </div>
                     </td>

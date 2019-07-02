@@ -12,7 +12,7 @@ public class CustomerController {
  CustomerRepository customerRepository;
 
 
-    @GetMapping( {"/", "/login"})
+   /* @GetMapping( {"/", "/login"})
     public String login(){
         return "login";
     }
@@ -20,6 +20,6 @@ public class CustomerController {
     @GetMapping( {"/index"})
     public String index(){
         return "index";
-    }
+    }*/
 
 }

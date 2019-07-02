@@ -1,5 +1,6 @@
 package pe.isil.restaurant.repository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import pe.isil.restaurant.model.Client;
@@ -11,6 +12,7 @@ import java.util.List;
 @Repository
 public class JdbcClientRepository  implements ClientRepository {
 
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override
